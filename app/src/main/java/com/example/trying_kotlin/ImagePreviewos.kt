@@ -23,15 +23,7 @@ import androidx.compose.ui.unit.dp
 fun ImagePreviewos(
     bitmaps: List<Bitmap>
 ) {
-    if (bitmaps.isEmpty()) {
-        Box(
-            modifier = Modifier.padding(16.dp),
-            contentAlignment = Alignment.Center,
-        ) {
-            Text("There are no photos yet")
-        }
-    }
-    else {
+    if (bitmaps.isNotEmpty()) {
         LazyRow(
             modifier = Modifier.fillMaxWidth(),
             horizontalArrangement = Arrangement.SpaceAround,
